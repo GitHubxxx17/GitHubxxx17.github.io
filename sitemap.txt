@@ -1,3 +1,6 @@
+http://example.com/Gallery/GenshinImpact.html
+http://example.com/Gallery/HonkaiImpact3.html
+http://example.com/Gallery/wallpaper.html
 http://example.com/galleryGroup/index.html
 http://example.com/categories/index.html
 http://example.com/link/index.html
