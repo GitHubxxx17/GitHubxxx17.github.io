@@ -1,3 +1,6 @@
+http://example.com/2022/06/08/%E6%A0%87%E7%AD%BE%E6%8F%92%E4%BB%B6/
+http://example.com/2022/06/10/README/
+http://example.com/2022/06/10/markdown/
 http://example.com/galleryGroup/index.html
 http://example.com/Gallery/GenshinImpact.html
 http://example.com/Gallery/HonkaiImpact3.html
