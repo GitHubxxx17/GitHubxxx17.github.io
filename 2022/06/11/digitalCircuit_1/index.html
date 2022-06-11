@@ -1,0 +1,268 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>digital circuit_1 | xxx17的个人博客</title><meta name="keywords" content="笔记"><meta name="author" content="xxx17"><meta name="copyright" content="xxx17"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="第1章 数字逻辑基础 概述 了解数字电路的特点及要求   模拟电路数字电路模拟电路 模拟电路：所处理的信号在幅度和时间上都是连续的模拟信号。如： 正弦函数、 指数函数数字电路数字电路 ：所处理的信号在时间和数值上都是离散的数字信号。在数字电路中，信号的幅值通常仅有两种取值：   高电平、低电平 数字技术的特点数字技术的优点数字技术的劣势数字技术的优点  数字系统容易设计与调试（开关电路） 数字信息">
+<meta property="og:type" content="article">
+<meta property="og:title" content="digital circuit_1">
+<meta property="og:url" content="http://example.com/2022/06/11/digitalCircuit_1/index.html">
+<meta property="og:site_name" content="xxx17的个人博客">
+<meta property="og:description" content="第1章 数字逻辑基础 概述 了解数字电路的特点及要求   模拟电路数字电路模拟电路 模拟电路：所处理的信号在幅度和时间上都是连续的模拟信号。如： 正弦函数、 指数函数数字电路数字电路 ：所处理的信号在时间和数值上都是离散的数字信号。在数字电路中，信号的幅值通常仅有两种取值：   高电平、低电平 数字技术的特点数字技术的优点数字技术的劣势数字技术的优点  数字系统容易设计与调试（开关电路） 数字信息">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/16.webp">
+<meta property="article:published_time" content="2022-06-11T01:35:08.740Z">
+<meta property="article:modified_time" content="2022-06-11T03:44:28.067Z">
+<meta property="article:author" content="xxx17">
+<meta property="article:tag" content="笔记">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/16.webp"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2022/06/11/digitalCircuit_1/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'mediumZoom',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'digital circuit_1',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-06-11 11:44:28'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/custom.css"  media="defer" onload="this.media='all'"><!-- hexo injector head_end start --><link rel="stylesheet" href="https:[email protected]/lib/assets/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https:[email protected]/lib/tag_plugins.css" media="defer" onload="this.media='all'"><script src="https:[email protected]/lib/assets/carousel-touch.js"></script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.2.0"><link rel="alternate" href="/atom.xml" title="xxx17的个人博客" type="application/atom+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/3.webp" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">5</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li><li><a class="site-page child" href="/galleryGroup/"><i class="fa-fw fas fa-images"></i><span> 图库</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/16.webp')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">xxx17的个人博客</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li><li><a class="site-page child" href="/galleryGroup/"><i class="fa-fw fas fa-images"></i><span> 图库</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">digital circuit_1</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-06-11T01:35:08.740Z" title="发表于 2022-06-11 09:35:08">2022-06-11</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-06-11T03:44:28.067Z" title="更新于 2022-06-11 11:44:28">2022-06-11</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="digital circuit_1"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><span class='p center large'>第1章 数字逻辑基础</span>
+<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><div class="tip info"><ul>
+<li>了解数字电路的特点及要求</li>
+</ul>
+</div>
+<div class="tabs" id="模拟电路"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#模拟电路-1">模拟电路</button></li><li class="tab"><button type="button" data-href="#模拟电路-2">数字电路</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="模拟电路-1"><p><strong>模拟电路</strong><br> 模拟电路：所处理的信号在幅度和时间上都是连续的模拟信号。<br>如： 正弦函数、 指数函数</p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="模拟电路-2"><p><strong>数字电路</strong><br>数字电路 ：所处理的信号在时间和数值上都是离散的数字信号。<br>在数字电路中，信号的幅值通常仅有两种取值：<br>   高电平、低电平</p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>
+<h3 id="数字技术的特点"><a href="#数字技术的特点" class="headerlink" title="数字技术的特点"></a>数字技术的特点</h3><div class="tabs" id="特点"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#特点-1">数字技术的优点</button></li><li class="tab"><button type="button" data-href="#特点-2">数字技术的劣势</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="特点-1"><p><strong>数字技术的优点</strong></p>
+<ul>
+<li>数字系统容易设计与调试（开关电路）</li>
+<li>数字信息存储方便（大规模存储技术）</li>
+<li>数字电路抗干扰能力强（电压的准确值不重要）</li>
+<li>数字器件的集成度高（开关元件）</li>
+<li>数字集成电路的可编程性好（硬件描述语言）</li>
+</ul><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="特点-2"><p><strong>数字技术的劣势</strong></p>
+<ul>
+<li>自然界中大多数物理量都是模拟量。</li>
+<li>模拟信号的数字化过程需要时间，增加系统的复杂性和费用。<ul>
+<li>首先，先把实际中的模拟信号转换为数字形式。</li>
+<li>然后，进行数字信号的处理。</li>
+<li>最后，再把数字信号转换为模拟信号进行输出。</li>
+</ul>
+</li>
+</ul><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>
+<h3 id="数字电路的发展"><a href="#数字电路的发展" class="headerlink" title="数字电路的发展"></a>数字电路的发展</h3><ul>
+<li><p>数字电路的发展以<span class='p red'>数字逻辑器件</span>的发展为标志。</p>
+<div class="img-wrap"><div class="img-bg"><img class="img" src="http://GitHubxxx17.github.io/img/电路/d1.jpg"/></div></div>
+<h4 id="集成电路的分类"><a href="#集成电路的分类" class="headerlink" title="集成电路的分类()"></a>集成电路的分类(<span class='p red'>按集成度分</span>)</h4><p>| 分类 | 晶体管的个数 | 典型集成电路 |<br>| :——-:| :——: | :——: |<br>| SSI | ≤10 | 门电路 |<br>| MSI |  100～1000  | 计数器、加法器 |<br>| LSI | 1000 ~ 106 | 小型存储器 |<br>| VLSI | 10～100 | 大型存储器 |<br>| ULSI | ＞106 | 可编程逻辑器件 |</p>
+</li>
+</ul>
+<h3 id="数字电路的分析方法"><a href="#数字电路的分析方法" class="headerlink" title="数字电路的分析方法"></a>数字电路的分析方法</h3><p> 1.分析工具： 逻辑代数<br> 2.研究对象： 输入与输出之间的逻辑关系<br> 3.电路功能的描述方法：真值表、逻辑表达式、时序图、逻辑电路图等<br> 4.测试技术与仪器:指示灯、万用表、示波器、逻辑分析仪</p>
+<h2 id="数制与码制"><a href="#数制与码制" class="headerlink" title="数制与码制"></a>数制与码制</h2><div class="tip info"><ul>
+<li>数制是数的表示方法。</li>
+<li>为了描述数的大小或多少，人们采用计数的方法，称为进位计数制，简称<span class='p red'>数制</span>。</li>
+<li>数制的2个基本要素：<span class='nota' data-nota='一个数位上可能出现的基本数码的个数，记为R'>基数</span>与<span class='nota' data-nota='位权：位权是基数的幂，记为Ri'>位权</span>。</li>
+</ul>
+</div>
+<div class="img-wrap"><div class="img-bg"><img class="img" src="http://GitHubxxx17.github.io/img/电路/d2.jpg"/></div></div>
+<h3 id="数制间的相互转换"><a href="#数制间的相互转换" class="headerlink" title="数制间的相互转换"></a>数制间的相互转换</h3><h4 id="将十进制转换为其它进制数据"><a href="#将十进制转换为其它进制数据" class="headerlink" title="将十进制转换为其它进制数据"></a>将十进制转换为其它进制数据</h4><ul>
+<li>整数部分采用除基取余法。<ul>
+<li>除基取余法是将已知十进制数的整数部分反复除以转换进制的基数R。</li>
+<li>第一次除后的商作为下次的被除数，余数作为转换后相应进制数的一个数码。</li>
+<li>第一次相除得到的余数是该进制数的最低位(K)，最后一次余数是该进制数的最高位(Kn-)。从低位到高位逐次进行，直到商是0为止，则 Kn-1Kn-2…KK,即为所求转换后的进制数。<div class="img-wrap"><div class="img-bg"><img class="img" src="http://GitHubxxx17.github.io/img/电路/d3.png"/></div></div>
+<div class="img-wrap"><div class="img-bg"><img class="img" src="http://GitHubxxx17.github.io/img/电路/d4.png"/></div></div>
+<h4 id="将其它进制数据转换为十进制"><a href="#将其它进制数据转换为十进制" class="headerlink" title="将其它进制数据转换为十进制"></a>将其它进制数据转换为十进制</h4><div class="img-wrap"><div class="img-bg"><img class="img" src="http://GitHubxxx17.github.io/img/电路/d5.png"/></div></div>
+<h4 id="将二进制转换为八进制和十六进制数据"><a href="#将二进制转换为八进制和十六进制数据" class="headerlink" title="将二进制转换为八进制和十六进制数据"></a>将二进制转换为八进制和十六进制数据</h4>整数部分：由小数点向左3(4)位一组，高位不足补0<br>小数部分：由小数点向右3(4)位一组，低位不足补0</li>
+</ul>
+</li>
+</ul>
+<h3 id="数制总结"><a href="#数制总结" class="headerlink" title="数制总结"></a>数制总结</h3><p>①二进制的优点是每位仅可能有<span class='p red'>0和1</span>两个数码，即两种状态。二极管的导通与截止，三极管的饱和导通与截止等均可表示这两种状态。<br>②<span class='p red'>二进制是数字系统的基本计数方法。</span><br>③在计算机系统中，二进制主要用于机器内部的数据处理；八进制和十六进制主要用于书写程序；十进制主要用于运算最终结果的输出。<br>④对于较大的数值，二进制的位数较多，八进制和十六进制  主要用于书写，可<span class='p red'>缩短位数</span>。</p>
+<h3 id="码制"><a href="#码制" class="headerlink" title="码制"></a>码制</h3><div class="tip info"><ul>
+<li>编码：用按照一定规律排列的多位二进制数码表示的某种信息，如：文字、符号、数值。</li>
+<li>码制：形成代码的<span class='p red'>规律法则</span>。</li>
+</ul>
+</div>
+<h4 id="有权码"><a href="#有权码" class="headerlink" title="有权码"></a>有权码</h4><ul>
+<li>每一位有固定的权值。其中，常见的有8421码、2421码、5421码。</li>
+<li>8421BCD码是最基本和最常用的BCD码，它和四位自然二进制码相似，各位的权值为8、4、2、1，故称为有权BCD码。</li>
+<li>有权码展开式          N = <span class="bubble-content">W3</span><span class="bubble-notation"><span class="bubble-item" style="background-color:#71a4e3;">位权</span></span><span class="bubble-content">b3</span><span class="bubble-notation"><span class="bubble-item" style="background-color:#71a4e3;">系数</span></span>＋ W2b2＋ W1b1＋ W0b0</li>
+</ul>
+<h4 id="无权码"><a href="#无权码" class="headerlink" title="无权码"></a>无权码</h4><ul>
+<li>每一位没有固定的权值。例如：余3码、 BCD格雷码。</li>
+<li>余3码是由8421码加3后形成的。</li>
+<li>格雷码是一个数列集合，它的两个相邻代码之间仅有一位取值不同。</li>
+</ul>
+<h4 id="奇偶校验码"><a href="#奇偶校验码" class="headerlink" title="奇偶校验码"></a>奇偶校验码</h4><div class="tip bell"><ul>
+<li>信息在存储和传送过程中，常会由于干扰而发生错误。奇偶校验码可以检测出一位错误。它由信息位和校验位组成，校验码仅有一位，可以放在信息位的前面或后面。</li>
+</ul>
+</div>
+<ul>
+<li>①奇校验：每一码组中信息位和校验位的1的个数之和为奇数。即当信息位的代码中有奇数个1时，校验位为0，有偶数个1时，校验位为1。</li>
+<li>②偶校验：每一码组中信息位和校验位的1的个数之和为偶数。即当信息位的代码中有偶数个1时，校验位为0，有奇数个1时，校验位为1。</li>
+<li>③特点：奇偶校验只能检测出一位错码，但无法测定哪一位出错，也不能自行纠正错误。出错概率极小，容易实现，所以应用广泛。</li>
+</ul>
+<h2 id="三种基本逻辑运算"><a href="#三种基本逻辑运算" class="headerlink" title="三种基本逻辑运算"></a>三种基本逻辑运算</h2><div class="tip info"><p>1、定义： 按一定的逻辑规律进行运算的代数。<br>2、特点：用字母表示变量，但变量取值仅有0、1两种值，但是，0、1不表示数值的大小，而表示两种对立的逻辑状态。<br>3、逻辑代数定义了3种基本逻辑运算：与 、或、非</p>
+</div>
+<div class="img-wrap"><div class="img-bg"><img class="img" src="http://GitHubxxx17.github.io/img/电路/d6.png"/></div></div>
+<h3 id="逻辑运算总结"><a href="#逻辑运算总结" class="headerlink" title="逻辑运算总结"></a>逻辑运算总结</h3><ul>
+<li>任何复杂的逻辑关系均可由与、或、非这三种基本逻辑运算组合而成。</li>
+<li>逻辑门是相关逻辑运算的电路符号，或者说是实现逻辑运算的载体。</li>
+<li>基本逻辑运算的逻辑关系可以分别用逻辑表达式、真值表、逻辑符号、波形图等形式进行描述。</li>
+</ul>
+<h2 id="逻辑代数的基本定理"><a href="#逻辑代数的基本定理" class="headerlink" title="逻辑代数的基本定理"></a>逻辑代数的基本定理</h2><div class="tip info"><p>逻辑代数的作用： </p>
+<ul>
+<li>分析数字系统、设计逻辑电路、简化逻辑函数。</li>
+<li>应用逻辑代数的与、或、非三种基本运算法则，可以推导出逻辑运算的基本定律；</li>
+<li>它是分析及简化逻辑电路的重要依据。</li>
+</ul>
+</div>
+<div class="img-wrap"><div class="img-bg"><img class="img" src="http://GitHubxxx17.github.io/img/电路/d7.png"/></div></div>
+<h4 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h4><div class="img-wrap"><div class="img-bg"><img class="img" src="http://GitHubxxx17.github.io/img/电路/d7.jpg"/></div></div>
+<h3 id="逻辑代数的基本规则"><a href="#逻辑代数的基本规则" class="headerlink" title="逻辑代数的基本规则"></a>逻辑代数的基本规则</h3><div class="img-wrap"><div class="img-bg"><img class="img" src="http://GitHubxxx17.github.io/img/电路/d8.jpg"/></div></div>
+<div class="img-wrap"><div class="img-bg"><img class="img" src="http://GitHubxxx17.github.io/img/电路/d10.jpg"/></div></div>
+<div class="img-wrap"><div class="img-bg"><img class="img" src="http://GitHubxxx17.github.io/img/电路/d11.jpg"/></div></div>
+<div class="img-wrap"><div class="img-bg"><img class="img" src="http://GitHubxxx17.github.io/img/电路/d12.jpg"/></div></div>
+<div class="img-wrap"><div class="img-bg"><img class="img" src="http://GitHubxxx17.github.io/img/电路/d13.jpg"/></div></div>
+<h4 id="例题-1"><a href="#例题-1" class="headerlink" title="例题"></a>例题</h4><div class="img-wrap"><div class="img-bg"><img class="img" src="http://GitHubxxx17.github.io/img/电路/d9.jpg"/></div></div>
+<div class="img-wrap"><div class="img-bg"><img class="img" src="http://GitHubxxx17.github.io/img/电路/d14.jpg"/></div></div>
+<h3 id="基本定律的应用"><a href="#基本定律的应用" class="headerlink" title="基本定律的应用"></a>基本定律的应用</h3><div class="tip bell"><p>对于一个特定的逻辑问题，有如下特性：</p>
+<ul>
+<li>其对应的真值表是唯一的；</li>
+<li>其逻辑函数的表达形式是多种多样的；</li>
+<li>每一种逻辑函数表达式对应一种逻辑电路；</li>
+</ul>
+<p>结论：实现一个逻辑问题的逻辑电路有多种形式。</p>
+</div>
+<div class="img-wrap"><div class="img-bg"><img class="img" src="http://GitHubxxx17.github.io/img/电路/d15.jpg"/></div></div>
+<div class="img-wrap"><div class="img-bg"><img class="img" src="http://GitHubxxx17.github.io/img/电路/d16.jpg"/></div></div>
+<h2 id="逻辑函数及其表示方法"><a href="#逻辑函数及其表示方法" class="headerlink" title="逻辑函数及其表示方法"></a>逻辑函数及其表示方法</h2><h2 id="逻辑函数的化简"><a href="#逻辑函数的化简" class="headerlink" title="逻辑函数的化简"></a>逻辑函数的化简</h2></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://example.com">xxx17</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2022/06/11/digitalCircuit_1/">http://example.com/2022/06/11/digitalCircuit_1/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">xxx17的个人博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a></div><div class="post_share"><div class="social-share" data-image="/img/16.webp" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/gh/overtrue/share.js@master/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2022/06/10/markdown/"><img class="next-cover" src="/img/13.webp" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">markdown渲染插件</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/3.webp" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">xxx17</div><div class="author-info__description">学无止境</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">5</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/GitHubxxx17"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/GitHubxxx17" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://github.com/GitHubxxx17" target="_blank" title="Github"><i class="fab fa-weixin"></i></a><a class="social-icon" href="https://github.com/GitHubxxx17" target="_blank" title="Github"><i class="fab fa-qq"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">网站持续更新中······</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A6%82%E8%BF%B0"><span class="toc-number">1.</span> <span class="toc-text">概述</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E5%AD%97%E6%8A%80%E6%9C%AF%E7%9A%84%E7%89%B9%E7%82%B9"><span class="toc-number">1.1.</span> <span class="toc-text">数字技术的特点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF%E7%9A%84%E5%8F%91%E5%B1%95"><span class="toc-number">1.2.</span> <span class="toc-text">数字电路的发展</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9B%86%E6%88%90%E7%94%B5%E8%B7%AF%E7%9A%84%E5%88%86%E7%B1%BB"><span class="toc-number">1.2.1.</span> <span class="toc-text">集成电路的分类(按集成度分)</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF%E7%9A%84%E5%88%86%E6%9E%90%E6%96%B9%E6%B3%95"><span class="toc-number">1.3.</span> <span class="toc-text">数字电路的分析方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E5%88%B6%E4%B8%8E%E7%A0%81%E5%88%B6"><span class="toc-number">2.</span> <span class="toc-text">数制与码制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E5%88%B6%E9%97%B4%E7%9A%84%E7%9B%B8%E4%BA%92%E8%BD%AC%E6%8D%A2"><span class="toc-number">2.1.</span> <span class="toc-text">数制间的相互转换</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B0%86%E5%8D%81%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2%E4%B8%BA%E5%85%B6%E5%AE%83%E8%BF%9B%E5%88%B6%E6%95%B0%E6%8D%AE"><span class="toc-number">2.1.1.</span> <span class="toc-text">将十进制转换为其它进制数据</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B0%86%E5%85%B6%E5%AE%83%E8%BF%9B%E5%88%B6%E6%95%B0%E6%8D%AE%E8%BD%AC%E6%8D%A2%E4%B8%BA%E5%8D%81%E8%BF%9B%E5%88%B6"><span class="toc-number">2.1.2.</span> <span class="toc-text">将其它进制数据转换为十进制</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B0%86%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2%E4%B8%BA%E5%85%AB%E8%BF%9B%E5%88%B6%E5%92%8C%E5%8D%81%E5%85%AD%E8%BF%9B%E5%88%B6%E6%95%B0%E6%8D%AE"><span class="toc-number">2.1.3.</span> <span class="toc-text">将二进制转换为八进制和十六进制数据</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E5%88%B6%E6%80%BB%E7%BB%93"><span class="toc-number">2.2.</span> <span class="toc-text">数制总结</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A0%81%E5%88%B6"><span class="toc-number">2.3.</span> <span class="toc-text">码制</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%89%E6%9D%83%E7%A0%81"><span class="toc-number">2.3.1.</span> <span class="toc-text">有权码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%97%A0%E6%9D%83%E7%A0%81"><span class="toc-number">2.3.2.</span> <span class="toc-text">无权码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A5%87%E5%81%B6%E6%A0%A1%E9%AA%8C%E7%A0%81"><span class="toc-number">2.3.3.</span> <span class="toc-text">奇偶校验码</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E7%A7%8D%E5%9F%BA%E6%9C%AC%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97"><span class="toc-number">3.</span> <span class="toc-text">三种基本逻辑运算</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E6%80%BB%E7%BB%93"><span class="toc-number">3.1.</span> <span class="toc-text">逻辑运算总结</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E4%BB%A3%E6%95%B0%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%AE%9A%E7%90%86"><span class="toc-number">4.</span> <span class="toc-text">逻辑代数的基本定理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BE%8B%E9%A2%98"><span class="toc-number">4.0.1.</span> <span class="toc-text">例题</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E4%BB%A3%E6%95%B0%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%A7%84%E5%88%99"><span class="toc-number">4.1.</span> <span class="toc-text">逻辑代数的基本规则</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BE%8B%E9%A2%98-1"><span class="toc-number">4.1.1.</span> <span class="toc-text">例题</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E5%AE%9A%E5%BE%8B%E7%9A%84%E5%BA%94%E7%94%A8"><span class="toc-number">4.2.</span> <span class="toc-text">基本定律的应用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E5%87%BD%E6%95%B0%E5%8F%8A%E5%85%B6%E8%A1%A8%E7%A4%BA%E6%96%B9%E6%B3%95"><span class="toc-number">5.</span> <span class="toc-text">逻辑函数及其表示方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E5%87%BD%E6%95%B0%E7%9A%84%E5%8C%96%E7%AE%80"><span class="toc-number">6.</span> <span class="toc-text">逻辑函数的化简</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/06/11/digitalCircuit_1/" title="digital circuit_1"><img src="/img/16.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="digital circuit_1"/></a><div class="content"><a class="title" href="/2022/06/11/digitalCircuit_1/" title="digital circuit_1">digital circuit_1</a><time datetime="2022-06-11T01:35:08.740Z" title="发表于 2022-06-11 09:35:08">2022-06-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/06/10/markdown/" title="markdown渲染插件"><img src="/img/13.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="markdown渲染插件"/></a><div class="content"><a class="title" href="/2022/06/10/markdown/" title="markdown渲染插件">markdown渲染插件</a><time datetime="2022-06-10T06:01:59.050Z" title="发表于 2022-06-10 14:01:59">2022-06-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/06/10/%E5%A4%96%E6%8C%82%E6%A0%87%E7%AD%BE/" title="外挂标签"><img src="/img/9.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="外挂标签"/></a><div class="content"><a class="title" href="/2022/06/10/%E5%A4%96%E6%8C%82%E6%A0%87%E7%AD%BE/" title="外挂标签">外挂标签</a><time datetime="2022-06-10T05:53:47.171Z" title="发表于 2022-06-10 13:53:47">2022-06-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/06/08/%E6%A0%87%E7%AD%BE%E6%8F%92%E4%BB%B6%E6%A0%B7%E5%BC%8F/" title="标签插件样式"><img src="/img/11.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="标签插件样式"/></a><div class="content"><a class="title" href="/2022/06/08/%E6%A0%87%E7%AD%BE%E6%8F%92%E4%BB%B6%E6%A0%B7%E5%BC%8F/" title="标签插件样式">标签插件样式</a><time datetime="2022-06-08T09:31:47.038Z" title="发表于 2022-06-08 17:31:47">2022-06-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/06/07/butterfly%E4%B8%BB%E9%A2%98/" title="关于Butterfly主题"><img src="/img/8.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="关于Butterfly主题"/></a><div class="content"><a class="title" href="/2022/06/07/butterfly%E4%B8%BB%E9%A2%98/" title="关于Butterfly主题">关于Butterfly主题</a><time datetime="2022-06-07T10:01:20.607Z" title="发表于 2022-06-07 18:01:20">2022-06-07</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/img/16.webp')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By xxx17</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">简</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/fireworks.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --><script async src="//at.alicdn.com/t/font_2032782_8d5kxvn09md.js"></script><!-- hexo injector body_end end --><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script></body></html>
