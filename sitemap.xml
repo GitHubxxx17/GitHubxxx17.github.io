@@ -11,6 +11,15 @@
   </url>
   
   <url>
+    <loc>http://example.com/2022/06/11/digitalCircuit_3/</loc>
+    
+    <lastmod>2022-06-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://example.com/2022/06/08/%E6%A0%87%E7%AD%BE%E6%8F%92%E4%BB%B6%E6%A0%B7%E5%BC%8F/</loc>
     
     <lastmod>2022-06-11</lastmod>
@@ -135,14 +144,21 @@
 
   
   <url>
-    <loc>http://example.com/categories/%E6%8F%92%E4%BB%B6/</loc>
+    <loc>http://example.com/categories/Hexo%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2022-06-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/categories/Hexo%E6%95%99%E7%A8%8B/</loc>
+    <loc>http://example.com/categories/%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2022-06-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/categories/%E6%8F%92%E4%BB%B6/</loc>
     <lastmod>2022-06-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
