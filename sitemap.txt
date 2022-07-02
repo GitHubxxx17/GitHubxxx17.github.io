@@ -11,5 +11,5 @@ http://example.com/Gallery/wallpaper.html
 http://example.com/categories/index.html
 http://example.com/
 http://example.com/tags/%E6%8F%92%E4%BB%B6/
-http://example.com/categories/%E6%8F%92%E4%BB%B6/
 http://example.com/categories/Hexo%E6%95%99%E7%A8%8B/
+http://example.com/categories/%E6%8F%92%E4%BB%B6/
