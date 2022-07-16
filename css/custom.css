@@ -43,9 +43,12 @@ i:hover{
   background-repeat: no-repeat;
   /* 背景图像大小 */
   background-size: cover;
-  background-position: 50% 20%;
+  background-position: 50% 30%;
 }
 
+#page-header {
+  background-position: 50% 30%;
+}
 
 [data-theme="dark"] div.btns {
   filter: brightness(0.7);
