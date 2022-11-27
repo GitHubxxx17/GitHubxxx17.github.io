@@ -162,8 +162,8 @@ function loadWidget(config) {
 			modelTexturesId = localStorage.getItem("modelTexturesId");
 		if (modelId === null) {
 			// 首次访问加载 指定模型 的 指定材质
-			modelId = 3; // 模型 ID1
-			modelTexturesId = 85; // 材质 ID53
+			modelId = 2; // 模型 ID1
+			modelTexturesId = 0; // 材质 ID53
 		}
 		loadModel(modelId, modelTexturesId);
 		fetch(waifuPath)
