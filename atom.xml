@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-12-06T03:14:52.737Z</updated>
+  <updated>2022-12-10T12:21:42.135Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vue笔记</title>
+    <link href="http://example.com/2022/12/11/vue%E7%AC%94%E8%AE%B0/"/>
+    <id>http://example.com/2022/12/11/vue%E7%AC%94%E8%AE%B0/</id>
+    <published>2022-12-10T16:00:00.000Z</published>
+    <updated>2022-12-10T12:21:42.135Z</updated>
+    
+    <content type="html"><![CDATA[<details class="folding-tag" green close><summary> 参考 </summary>              <div class='content'>              <ol><li><p>学习视频链接：</p><div class="tag link"><a class="link-card" title="尚硅谷Vue2.0+Vue3.0全套教程" href="https://www.bilibili.com/video/BV1Zy4y1K7SH/"><div class="left"><img src="http://GitHubxxx17.github.io/img/bilibili.jpeg"/></div><div class="right"><p class="text">尚硅谷Vue2.0+Vue3.0全套教程</p><p class="url">https://www.bilibili.com/video/BV1Zy4y1K7SH/</p></div></a></div></li><li><p>官方文档：</p><div class="tag link"><a class="link-card" title="vue.js" href="https://v2.cn.vuejs.org/"><div class="left"><img src="https://v2.cn.vuejs.org/images/logo.svg"/></div><div class="right"><p class="text">vue.js</p><p class="url">https://v2.cn.vuejs.org/</p></div></a></div></li></ol>              </div>            </details><h1 id="vue入门"><a href="#vue入门" class="headerlink" title="vue入门"></a>vue入门</h1><div class="tip info"><p>Vue (读音 /vjuː/，类似于 view) 是一套用于构建用户界面的渐进式框架。与其它大型框架不同的是，Vue 被设计为可以自底向上逐层应用。Vue 的核心库只关注视图层，不仅易于上手，还便于与第三方库或既有项目整合。另一方面，当与现代化的工具链以及各种支持类库结合使用时，Vue 也完全能够为复杂的单页应用提供驱动。</p></div><h2 id="搭建Vue开发环境"><a href="#搭建Vue开发环境" class="headerlink" title="搭建Vue开发环境"></a>搭建Vue开发环境</h2><ol><li><p>在<a class="button" href="https://v2.cn.vuejs.org/v2/guide/installation.html">官方文档</a>中下载<code>开发版本</code>和<code>生产版本</code>;</p></li><li><p>在html中引入Vue</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;本地vue.js的路径&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 例如 --&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>搭建Vue开发环境<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;../js/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></li><li>处理控制台出现的警告<div class="img-wrap"><div class="img-bg"><img class="img" src="http://GitHubxxx17.github.io/img/vue/1.jpg"/></div></div><div class="tabs" id="解决方法"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#解决方法-1">方法一</button></li><li class="tab"><button type="button" data-href="#解决方法-2">方法二</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="解决方法-1"><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="title class_">Vue</span>.<span class="property">config</span>.<span class="property">productionTip</span> = <span class="literal">false</span>;<span class="comment">//设置为 false 以阻止 vue 在启动时生成生产提示。</span></span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="解决方法-2"><p>将vue.js中第367行<code>productionTip: true</code>改成<code>productionTip: false</code></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;details class=&quot;folding-tag&quot; green close&gt;&lt;summary&gt; 参考 &lt;/summary&gt;
+              &lt;div class=&#39;content&#39;&gt;
+              &lt;ol&gt;&lt;li&gt;&lt;p&gt;学习视频链接：&lt;/p&gt;&lt;di</summary>
+      
+    
+    
+    
+    <category term="笔记" scheme="http://example.com/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="笔记" scheme="http://example.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>mysql笔记二</title>
