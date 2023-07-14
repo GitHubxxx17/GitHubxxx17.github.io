@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-04-15T02:09:35.138Z</updated>
+  <updated>2023-07-14T12:58:35.154Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>搭建云服务器</title>
+    <link href="http://example.com/2023/07/14/%E6%90%AD%E5%BB%BA%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    <id>http://example.com/2023/07/14/%E6%90%AD%E5%BB%BA%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/</id>
+    <published>2023-07-14T12:00:00.000Z</published>
+    <updated>2023-07-14T12:58:35.154Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="1-注册阿里云账号"><a href="#1-注册阿里云账号" class="headerlink" title="1.注册阿里云账号"></a>1.注册阿里云账号</h1><blockquote><p><a href="https://www.aliyun.com/">阿里云官网</a><br>在<a href="https://developer.aliyun.com/plan/student">高校计划</a>进行学生认证，可以免费领取最高7个月的服务器<br><div class="img-wrap"><div class="img-bg"><img class="img" src="http://GitHubxxx17.github.io/img/server/1.png"/></div></div><br>修改以下两项<br><div class="img-wrap"><div class="img-bg"><img class="img" src="http://GitHubxxx17.github.io/img/server/2.png"/></div></div><br>购买（<del>白嫖</del>）成功后，重置实例密码然后打开远程连接<br><div class="img-wrap"><div class="img-bg"><img class="img" src="http://GitHubxxx17.github.io/img/server/3.png"/></div></div><br>通过Workbench远程连接，输入实例密码进入操作界面<br><div class="img-wrap"><div class="img-bg"><img class="img" src="http://GitHubxxx17.github.io/img/server/4.png"/></div></div></p></blockquote><h1 id="2-安装CentOS宝塔面板"><a href="#2-安装CentOS宝塔面板" class="headerlink" title="2. 安装CentOS宝塔面板"></a>2. 安装CentOS宝塔面板</h1><p>进入<a href="https://www.bt.cn/new/index.html">宝塔</a>官网注册账号，登录后进入后台&gt;安装宝塔<br>将该命令复制粘贴到Workbench远程连接的面板上，并执行（因为我一开始选择的是centOS系统，所以复制第一行命令）<br>ps:我一开始是通过下方的在线一键快速安装宝塔,但安装过程中卡住了，只能通过上面的方法<br><div class="img-wrap"><div class="img-bg"><img class="img" src="http://GitHubxxx17.github.io/img/server/5.png"/></div></div></p><p>安装结束后,这里会显示宝塔后台地址和账号密码，把这部分截图保存<br><div class="img-wrap"><div class="img-bg"><img class="img" src="http://GitHubxxx17.github.io/img/server/6.jpeg"/></div></div></p><h1 id="3-设置安全组"><a href="#3-设置安全组" class="headerlink" title="3. 设置安全组"></a>3. 设置安全组</h1><p>在完成以上操作之后你会发现访问不了该网址，是因为刚装的系统没有放行8888端口，面板后台无法打开。所以我们得先配置一下安全组。<br>进入修改安全组界面<br><div class="img-wrap"><div class="img-bg"><img class="img" src="http://GitHubxxx17.github.io/img/server/7.png"/></div></div><br>点击快速添加<br><div class="img-wrap"><div class="img-bg"><img class="img" src="http://GitHubxxx17.github.io/img/server/8.png"/></div></div><br>选中这几项完成配置<br><div class="img-wrap"><div class="img-bg"><img class="img" src="http://GitHubxxx17.github.io/img/server/9.png"/></div></div></p><h1 id="4-浏览器访问宝塔面板"><a href="#4-浏览器访问宝塔面板" class="headerlink" title="4. 浏览器访问宝塔面板"></a>4. 浏览器访问宝塔面板</h1><p>然后我们再打开的宝塔后台地址网址就能正常啦<br><div class="img-wrap"><div class="img-bg"><img class="img" src="http://GitHubxxx17.github.io/img/server/10.png"/></div></div></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;1-注册阿里云账号&quot;&gt;&lt;a href=&quot;#1-注册阿里云账号&quot; class=&quot;headerlink&quot; title=&quot;1.注册阿里云账号&quot;&gt;&lt;/a&gt;1.注册阿里云账号&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.aliyun.c</summary>
+      
+    
+    
+    
+    <category term="项目部署" scheme="http://example.com/categories/%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2/"/>
+    
+    
+    <category term="项目部署" scheme="http://example.com/tags/%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2/"/>
+    
+  </entry>
   
   <entry>
     <title>数组sort()详解</title>
